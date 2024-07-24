@@ -1,11 +1,11 @@
-/* Reset and base styles */
+/* Reset y estilos base */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-  /* Font imports */
+  /* Importación de fuentes */
   @font-face {
     font-family: 'OpenSans-Light';
     src: url('./Open_Sans/OpenSans-Light.ttf') format('truetype');
@@ -20,7 +20,7 @@
     font-style: normal;
   }
   
-  /* Font Awesome imports */
+  /* Importación de Font Awesome */
   @font-face {
     font-family: 'Font Awesome 6 Free';
     src: url('./Font_Awesome_Free/Font\ Awesome\ 6\ Free-Solid-900.otf') format('opentype');
@@ -60,7 +60,7 @@
     --spacing-base: 1rem;
   }
   
-  /* Utility classes */
+  /* Clases de utilidad */
   .text-small {
     font-size: var(--font-size-small);
     font-weight: 400;
@@ -82,7 +82,7 @@
     align-items: center;
   }
   
-  /* Global styles */
+  /* Estilos globales */
   body {
     font-family: 'OpenSans-Light', sans-serif;
     font-weight: 300;
@@ -94,7 +94,7 @@
     padding: var(--spacing-base);
   }
   
-  /* Icon styles */
+  /* Estilos de iconos */
   [class^="icon-"]::before {
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
@@ -117,30 +117,30 @@
     font-size: var(--font-size-small);
   }
   
-  /* Navigation styles */
-  .navegacion {
+  /* Estilos Nav */
+  .nav {
     background-color: var(--color-primary);
-    padding: var(--spacing-base) var(--spacing-base);
+    padding: var(--spacing-base);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .contenedor-titulo {
+  .nav__title-container {
     display: flex;
     align-items: baseline;
     gap: var(--spacing-small);
   }
   
-  .titulo {
+  .nav__title {
     font-size: var(--font-size-xlarge);
   }
   
-  .breadcrumb {
+  .nav__breadcrumb {
     font-size: var(--font-size-small);
   }
   
-  .dropdown-button {
+  .btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -148,7 +148,7 @@
     font-size: var(--font-size-base);
   }
   
-  /* Article container styles */
+  /* Estilos de contenedor de artículo */
   .contenedor-articulo {
     background-color: var(--color-secondary);
     padding: var(--spacing-small);
@@ -157,12 +157,13 @@
   .articulo {
     display: inline-block;
     padding: 0.1875rem;
+    margin-left: var(--spacing-small);
     border-radius: 0.125rem;
     color: var(--color-primary);
     background-color: var(--color-blue);
   }
   
-  /* Stock container styles */
+  /* Estilos de contenedor principal */
   .contenedor-principal {
     background-color: var(--color-background);
     padding: var(--spacing-base);
@@ -171,7 +172,7 @@
   .contenedor-stock {
     padding: var(--spacing-base);
     background-color: var(--color-primary);
-    margin-bottom: 0.3125rem;
+    margin-bottom: var(--spacing-small);
   }
   
   .contenedor-estado {
@@ -201,7 +202,7 @@
     margin-bottom: var(--spacing-small);
   }
   
-  /* Quantity styles */
+  /* Estilos de cantidad */
   .contenedor-cantidades {
     display: flex;
     gap: var(--spacing-base);
@@ -248,7 +249,7 @@
     font-size: var(--font-size-small);
   }
   
-  /* Quantity info styles */
+  /* Estilos de información de cantidad */
   .info-cantidad {
     display: flex;
     align-items: center;
@@ -280,7 +281,7 @@
   .gris { background-color: var(--color-gray); }
   .rojo { background-color: var(--color-red); }
   
-  /* Table styles */
+  /* Estilos de tabla */
   .contenedor-tabla {
     margin: var(--spacing-base) 0;
     background-color: var(--color-primary);
@@ -320,10 +321,15 @@
   }
   
   .disponibilidad {
+    max-width: 50px;
     border-radius: 0.3125rem;
     margin-right: var(--spacing-base);
     padding: 0.3125rem 1.375rem;
     color: var(--color-primary);
+  }
+
+  .disponibilidad.verde {
+    padding: 0.3125rem 1.25rem;
   }
   
   .tabla-stock tbody tr:nth-child(odd) {
@@ -334,7 +340,7 @@
     background-color: #e9ecef;
   }
   
-  /* Footer styles */
+  /* Estilos de pie de página */
   .footer {
     margin-top: var(--spacing-base);
     background-color: #DAEDFA;
@@ -350,22 +356,22 @@
     display: none;
   }
   
-  /* Responsive styles */
+  /* Estilos responsivos */
   @media (max-width: 450px) {
     body {
       padding: var(--spacing-small);
     }
 
-    /* Navegación */
-    .navegacion {
+    /* Nav */
+    .nav {
       padding: var(--spacing-small);
     }
 
-    .breadcrumb {
+    .nav__breadcrumb {
       display: none;
     }
 
-    .dropdown-button {
+    .btn {
       display: none;
     }
     /* Principal */
@@ -379,7 +385,7 @@
       display: none;
     }
 
-    /* Stock */
+    /* Cantidad */
     .contenedor-cantidades {
       flex-direction: column;
     }
@@ -516,7 +522,7 @@
         border-radius: 4px;
       }
     
-      /* Show desplegables and hide table */
+      /* Mostrar desplegables y ocultar tabla */
       .contenedor-tabla {
         display: none;
       }

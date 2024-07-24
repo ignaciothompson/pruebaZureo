@@ -8,27 +8,28 @@
     <title>Stock Artículo</title>
   </head>
   <body>
-    <!-- Navegación -->
-    <nav class="navegacion">
-      <div class="contenedor-titulo">
-        <h1 class="titulo">Stock de un artículo</h1>
-        <p class="breadcrumb">
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="nav__title-container">
+        <h1 class="nav__title">Stock de un artículo</h1>
+        <p class="nav__breadcrumb">
           Stock / Informes / <span class="bold">Stock de un artículo</span>
         </p>
       </div>
-      <button class="dropdown-button">
+      <button class="btn" aria-label="Expandir menú">
         <span class="icon-chevron-down"></span>
       </button>
     </nav>
-    <!-- Fin de navegación -->
+    <!-- Fin de nav -->
+
     <!-- Artículo -->
     <div class="contenedor-articulo">
       <p class="articulo text-small">
         Artículo: Acx115 - Cable Lightning 1 Metro Apple Original MXLY2AM/A
       </p>
     </div>
-    <div class="contenedor-principal">
-      <div class="contenedor-stock">
+    <main class="contenedor-principal">
+      <section class="contenedor-stock">
         <div class="contenedor-estado">
           <div class="info-estado">
             <h2 class="titulo-articulo bold">
@@ -95,10 +96,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Fin del artículo -->
+
       <!-- Contenedor de tabla -->
-      <div class="contenedor-tabla">
+      <section class="contenedor-tabla">
         <table class="tabla-stock">
           <thead>
             <tr>
@@ -182,13 +184,13 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
       <!-- Fin de tabla -->
       
       <!-- Desplegables -->
-      <div class="contenedor-desplegables">
+      <section class="contenedor-desplegables">
         <div class="desplegable">
-          <div class="desplegable-header">
+          <div class="desplegable-header" aria-expanded="false">
             <div class="desplegable-header-left">
               <h3 class="desplegable-titulo bold">Las Piedras Shopping</h3>
               <p class="desplegable-subtitulo">Local de venta</p>
@@ -220,7 +222,7 @@
           </div>
         </div>
         <div class="desplegable">
-            <div class="desplegable-header">
+            <div class="desplegable-header" aria-expanded="false">
               <div class="desplegable-header-left">
                 <h3 class="desplegable-titulo bold">Depósito Central</h3>
                 <p class="desplegable-subtitulo">Almacén sin stock disponible</p>
@@ -255,7 +257,7 @@
             </div>
           </div>
           <div class="desplegable">
-            <div class="desplegable-header">
+            <div class="desplegable-header" aria-expanded="false">
               <div class="desplegable-header-left">
                 <h3 class="desplegable-titulo bold">Centro</h3>
                 <p class="desplegable-subtitulo">Local de venta</p>
@@ -276,7 +278,7 @@
             </div>
           </div>
           <div class="desplegable">
-            <div class="desplegable-header">
+            <div class="desplegable-header" aria-expanded="false">
               <div class="desplegable-header-left">
                 <h3 class="desplegable-titulo bold">Maldonado</h3>
                 <p class="desplegable-subtitulo">Local de venta</p>
@@ -303,7 +305,7 @@
             </div>
           </div>
           <div class="desplegable">
-            <div class="desplegable-header">
+            <div class="desplegable-header" aria-expanded="false">
               <div class="desplegable-header-left">
                 <h3 class="desplegable-titulo bold">Transportista</h3>
                 <p class="desplegable-subtitulo">Almacén sin stock disponible</p>
@@ -329,18 +331,19 @@
               </div>
             </div>
           </div>
-      </div>
+      </section>
+      <!-- Fin de desplegables -->
 
       <!-- Footer -->
-      <div class="footer">
+      <footer class="footer">
         <p class="footer-texto">
           Hay <span class="bold">1 Unidad</span> en
           <span class="bold">Remito - emitido</span> pendientes de facturar.
           <span class="bold">Ver Aquí</span>
         </p>
-      </div>
+      </footer>
       <!--Fin footer-->
-    </div>
+    </main>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
           const desplegables = document.querySelectorAll('.desplegable');
@@ -351,7 +354,7 @@
             const icon = desplegable.querySelector('.icon-chevron-down');
             
             header.addEventListener('click', () => {
-              // Close all other desplegables
+              // Cerrar todos los desplegables excepto el que se ha clickeado
               desplegables.forEach(otherDesplegable => {
                 if (otherDesplegable !== desplegable) {
                   const otherContent = otherDesplegable.querySelector('.desplegable-content');
@@ -361,7 +364,7 @@
                 }
               });
 
-              // Toggle the clicked desplegable
+              // Abrir o cerrar el desplegable que se ha clickeado
               content.style.display = content.style.display === 'block' ? 'none' : 'block';
               icon.style.transform = content.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0deg)';
             });
