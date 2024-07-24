@@ -56,7 +56,7 @@
     --font-size-xlarge: 1.5rem;
     
     --border-radius: 0.5rem;
-    --spacing-small: 0.625rem;
+    --spacing-small: 0.5rem;
     --spacing-base: 1rem;
   }
   
@@ -223,7 +223,7 @@
   }
   
   .widget-cantidad .icon {
-    font-size: 32px; /* Set icon size to 32px */
+    font-size: 32px;
     margin-right: var(--spacing-base);
     display: flex;
     align-items: center;
@@ -278,6 +278,7 @@
   .naranja { background-color: var(--color-orange); }
   .azul { background-color: var(--color-secondary-blue); }
   .gris { background-color: var(--color-gray); }
+  .rojo { background-color: var(--color-red); }
   
   /* Table styles */
   .contenedor-tabla {
@@ -345,16 +346,177 @@
   }
   
   /* Responsive styles */
-  @media (max-width: 768px) {
+  @media (max-width: 450px) {
     body {
       padding: var(--spacing-small);
     }
-  
+
+    /* Navegación */
+    .navegacion {
+      padding: var(--spacing-small);
+    }
+
+    .breadcrumb {
+      display: none;
+    }
+
+    .dropdown-button {
+      display: none;
+    }
+    /* Principal */
+    .contenedor-principal {
+      width: 100%;
+      padding: var(--spacing-base) 0;
+    }
+
+    /* Artículo */
+    .contenedor-articulo {
+      display: none;
+    }
+
+    /* Stock */
     .contenedor-cantidades {
       flex-direction: column;
     }
-  
-    .tabla-stock {
-      font-size: var(--font-size-small);
+
+    .contenedor-cantidad {
+      border-bottom: 0.125rem solid var(--color-background);
     }
+
+    .contenedor-cantidad:last-child {
+      border-bottom: none;
+    }
+
+    .contenedor-estado {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .links-estado {
+      width: 100%;
+      margin-top: var(--spacing-small);
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .link-estado {
+      width: fit-content;
+      margin: 0.1875rem;
+      text-align: center;
+    }
+  
+    /* Tabla */
+    .contenedor-tabla {
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      display: none;
+    }
+
+    /*Desplegables*/
+    .contenedor-desplegables {
+        display: block;
+      }
+    
+      .desplegable {
+        background-color: var(--color-primary);
+        margin-bottom: var(--spacing-small);
+      }
+    
+      .desplegable-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-small);
+        cursor: pointer;
+        border-bottom: 0.125rem solid var(--color-background);
+        width: 100%;
+      }
+    
+      .desplegable-header-left {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .desplegable-header-right {
+        display: flex;
+        align-items: center;
+      }
+    
+      .desplegable-titulo {
+        font-size: var(--font-size-base);
+      }
+    
+      .desplegable-subtitulo {
+        font-size: var(--font-size-small);
+        color: var(--color-text);
+      }
+    
+      .desplegable-disponibles {
+        font-family: 'OpenSans-Medium', sans-serif;
+        color: var(--color-secondary-green);
+        margin-right: var(--spacing-small);
+      }
+    
+      .desplegable-content {
+        display: none;
+        padding: var(--spacing-small);
+        background-color: var(--color-primary);
+      }
+    
+      .desplegable-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-small) 0;
+        gap: var(--spacing-base);
+      }
+
+      .desplegable-cantidades {
+        display: flex;
+        width: calc(50% - 1rem);
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--spacing-small)
+      }
+    
+      .desplegable-label {
+        font-size: var(--font-size-base);
+        font-family: 'OpenSans-Medium', sans-serif;
+      }
+    
+      .desplegable-value {
+        font-family: 'OpenSans-Medium', sans-serif;
+        font-weight: bold;
+      }
+
+      .desplegable-value.disponibles {
+        color: var(--color-secondary-green);
+      }
+    
+      .desplegable-value.sanos {
+        color: var(--color-green);
+        background-color: #e6f4e6;
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+    
+      .desplegable-value.roto {
+        color: var(--color-red);
+        background-color: #fce8e8;
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+    
+      /* Show desplegables and hide table */
+      .contenedor-tabla {
+        display: none;
+      }
+    
+      .contenedor-desplegables {
+        display: block;
+      }
   }
