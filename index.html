@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Stock Artículo</title>
+  </head>
+  <body>
+    <!-- Navegación -->
+    <nav class="navegacion">
+      <div class="contenedor-titulo">
+        <h1 class="titulo">Stock de un artículo</h1>
+        <p class="breadcrumb">
+          Stock / Informes / <span class="bold">Stock de un artículo</span>
+        </p>
+      </div>
+      <button class="dropdown-button">
+        <span class="icon-chevron-down"></span>
+      </button>
+    </nav>
+    <!-- Fin de navegación -->
+    <!-- Artículo -->
+    <div class="contenedor-articulo">
+      <p class="articulo text-small">
+        Artículo: Acx115 - Cable Lightning 1 Metro Apple Original MXLY2AM/A
+      </p>
+    </div>
+    <div class="contenedor-principal">
+      <div class="contenedor-stock">
+        <div class="contenedor-estado">
+          <div class="info-estado">
+            <h2 class="titulo-articulo bold">
+              (ACXx1115) Cable Lightning 1 Metro Apple Original MXLY2AM/A<span
+                class="icon-eye"
+              ></span>
+            </h2>
+            <p class="estado-articulo">
+              <span class="bold">Estado</span>: En vta, locales y web
+            </p>
+          </div>
+          <div class="links-estado">
+            <a href="#" class="link-estado text-small bold"
+              >Ajustar stock <span class="icon-external-link"></span
+            ></a>
+            <a href="#" class="link-estado text-small bold"
+              >Ver movimientos de stock <span class="icon-external-link"></span
+            ></a>
+          </div>
+        </div>
+        <div class="contenedor-cantidades">
+          <div class="contenedor-cantidad">
+            <div class="widget-cantidad disponible">
+                <i class="icon fas fa-calendar-check"></i>
+              <div class="cantidad-info bold">
+                <p class="cantidad-titulo">Disponibles</p>
+                <p class="cantidad-numero bold">99</p>
+                <p class="cantidad-texto">unidades</p>
+              </div>
+            </div>
+            <div class="info-cantidad">
+              <p class="info-cantidad-numero verde">100</p>
+              <p class="info-cantidad-texto bold">Sanos</p>
+            </div>
+            <div class="info-cantidad">
+              <p class="info-cantidad-numero naranja">-1</p>
+              <p class="info-cantidad-texto bold">A entregar</p>
+              <a href="#" class="ver">Ver</a>
+            </div>
+          </div>
+          <div class="contenedor-cantidad">
+            <div class="widget-cantidad proximamente">
+                <i class="icon fas fa-calendar-alt"></i>
+              <div class="cantidad-info bold">
+                <p class="cantidad-titulo">Próximamente</p>
+                <p class="cantidad-numero bold">0</p>
+                <p class="cantidad-texto">unidades</p>
+              </div>
+            </div>
+            <div class="info-cantidad">
+              <p class="info-cantidad-numero azul">1</p>
+              <p class="info-cantidad-texto bold">A recibir</p>
+              <a href="#" class="ver">Ver</a>
+            </div>
+          </div>
+          <div class="contenedor-cantidad">
+            <div class="widget-cantidad no-disponible">
+              <i class="icon fas fa-calendar-times"></i>
+              <div class="cantidad-info bold">
+                <p class="cantidad-titulo">No disponible</p>
+                <p class="cantidad-numero bold">1</p>
+                <p class="cantidad-texto">unidades</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin del artículo -->
+      <!-- Contenedor de tabla -->
+      <div class="contenedor-tabla">
+        <table class="tabla-stock">
+          <thead>
+            <tr>
+              <th>SUCURSAL</th>
+              <th>SANOS</th>
+              <th>CON DETALLES</th>
+              <th>MUESTRAS</th>
+              <th>DISPONIBLES</th>
+              <th>A RECUPERAR</th>
+              <th>ROTO</th>
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <h3 class="sucursal bold">Las Piedras Shopping</h3>
+                <p class="sucursal-info">Local de venta</p>
+              </td>
+              <td>50</td>
+              <td>0</td>
+              <td>0</td>
+              <td><span class="disponibilidad verde bold">50</span></td>
+              <td>0</td>
+              <td>1</td>
+              <td class="total bold">49</td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="sucursal bold">Depósito Central</h3>
+                <p class="sucursal-info">Almacén sin stock disponible</p>
+              </td>
+              <td>150</td>
+              <td>0</td>
+              <td>10</td>
+              <td><span class="disponibilidad gris bold">0</span></td>
+              <td>10</td>
+              <td>0</td>
+              <td class="total bold">150</td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="sucursal bold">Centro</h3>
+                <p class="sucursal-info">Local de venta</p>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td><span class="disponibilidad gris bold">0</span></td>
+              <td>0</td>
+              <td>0</td>
+              <td class="total bold">0</td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="sucursal bold">Maldonado</h3>
+                <p class="sucursal-info">Local de venta</p>
+              </td>
+              <td>50</td>
+              <td>0</td>
+              <td>0</td>
+              <td><span class="disponibilidad verde bold">50</span></td>
+              <td>0</td>
+              <td>0</td>
+              <td class="total bold">50</td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="sucursal bold">
+                  Transportista <span class="icon-eye link-envio"></span>
+                </h3>
+                <p class="sucursal-info">Almacén sin stock disponible</p>
+              </td>
+              <td>5</td>
+              <td>0</td>
+              <td>0</td>
+              <td><span class="disponibilidad gris bold">0</span></td>
+              <td>0</td>
+              <td>0</td>
+              <td class="total bold">5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Fin de tabla -->
+      <!-- Footer -->
+      <div class="footer">
+        <p class="footer-texto">
+          Hay <span class="bold">1 Unidad</span> en
+          <span class="bold">Remito - emitido</span> pendientes de facturar.
+          <span class="bold">Ver Aquí</span>
+        </p>
+      </div>
+      <!--Fin footer-->
+    </div>
+  </body>
+</html>

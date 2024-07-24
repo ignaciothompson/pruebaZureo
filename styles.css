@@ -1,0 +1,360 @@
+/* Reset and base styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Font imports */
+  @font-face {
+    font-family: 'OpenSans-Light';
+    src: url('./Open_Sans/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans-Medium';
+    src: url('./Open_Sans/OpenSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /* Font Awesome imports */
+  @font-face {
+    font-family: 'Font Awesome 6 Free';
+    src: url('./Font_Awesome_Free/Font\ Awesome\ 6\ Free-Solid-900.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Font Awesome 6 Free';
+    src: url('./Font_Awesome_Free/Font\ Awesome\ 6\ Free-Regular-400.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+  /* Variables */
+  :root {
+    --color-primary: #ffffff;
+    --color-secondary: #F8F8F8;
+    --color-background: #f1f1f1;
+    --color-text: #212121;
+    --color-blue: #2680EB;
+    --color-secondary-blue: #1873C8;
+    --color-green: #3A7A44;
+    --color-secondary-green: #5CB85C;
+    --color-red: #DC1717;
+    --color-orange: #E6953C;
+    --color-gray: #C2C2C2;
+    
+    --font-size-small: 0.6875rem;
+    --font-size-base: 0.8125rem;
+    --font-size-large: 1rem;
+    --font-size-xlarge: 1.5rem;
+    
+    --border-radius: 0.5rem;
+    --spacing-small: 0.625rem;
+    --spacing-base: 1rem;
+  }
+  
+  /* Utility classes */
+  .text-small {
+    font-size: var(--font-size-small);
+    font-weight: 400;
+  }
+  
+  .bold {
+    font-weight: 600;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'OpenSans-Light', sans-serif;
+    font-weight: 300;
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    max-width: 71.5625rem; /* 1145px */
+    margin: 0 auto;
+    padding: var(--spacing-base);
+  }
+  
+  /* Icon styles */
+  [class^="icon-"]::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    display: inline-block;
+  }
+  
+  .icon-chevron-down::before { content: '\f078'; }
+  .icon-eye::before { content: '\f06e'; }
+  .icon-external-link::before { content: '\f35d'; }
+  
+  .icon-eye {
+    color: var(--color-blue);
+    margin-left: 0.5rem;
+    font-size: var(--font-size-base);
+  }
+  
+  .icon-external-link {
+    color: var(--color-blue);
+    margin-left: 0.5rem;
+    font-size: var(--font-size-small);
+  }
+  
+  /* Navigation styles */
+  .navegacion {
+    background-color: var(--color-primary);
+    padding: var(--spacing-base) var(--spacing-base);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contenedor-titulo {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-small);
+  }
+  
+  .titulo {
+    font-size: var(--font-size-xlarge);
+  }
+  
+  .breadcrumb {
+    font-size: var(--font-size-small);
+  }
+  
+  .dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+  }
+  
+  /* Article container styles */
+  .contenedor-articulo {
+    background-color: var(--color-secondary);
+    padding: var(--spacing-small);
+  }
+  
+  .articulo {
+    display: inline-block;
+    padding: 0.1875rem;
+    border-radius: 0.125rem;
+    color: var(--color-primary);
+    background-color: var(--color-blue);
+  }
+  
+  /* Stock container styles */
+  .contenedor-principal {
+    background-color: var(--color-background);
+    padding: var(--spacing-base);
+  }
+  
+  .contenedor-stock {
+    padding: var(--spacing-base);
+    background-color: var(--color-primary);
+    margin-bottom: 0.3125rem;
+  }
+  
+  .contenedor-estado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-base);
+  }
+  
+  .titulo-articulo {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-small);
+  }
+  
+  .links-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .link-estado {
+    width: 100%;
+    margin: 0.1875rem;
+    text-align: end;
+    color: var(--color-blue);
+    text-decoration: none;
+    margin-bottom: var(--spacing-small);
+  }
+  
+  /* Quantity styles */
+  .contenedor-cantidades {
+    display: flex;
+    gap: var(--spacing-base);
+    margin-top: var(--spacing-base);
+  }
+  
+  .contenedor-cantidad {
+    flex: 1;
+  }
+  
+  .widget-cantidad {
+    height: 5.75rem;
+    margin-bottom: var(--spacing-base);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--spacing-base);
+  }
+  
+  .widget-cantidad .icon {
+    font-size: 32px; /* Set icon size to 32px */
+    margin-right: var(--spacing-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .disponible { background-color: #CCF5D2; color: var(--color-green); }
+  .proximamente { background-color: #DAEDFA; color: var(--color-blue); }
+  .no-disponible { background-color: #FFD6D6; color: var(--color-red); }
+
+  .cantidad-info {
+    text-align: end;
+  }
+  
+  .cantidad-numero {
+    font-size: 1.875rem;
+    font-weight: 700;
+    font-family: 'OpenSans', sans-serif;
+  }
+  
+  .cantidad-texto {
+    font-size: var(--font-size-small);
+  }
+  
+  /* Quantity info styles */
+  .info-cantidad {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-base);
+  }
+  
+  .info-cantidad-numero {
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-right: var(--spacing-small);
+    width: 3.4375rem;
+    height: 1.75rem;
+    border-radius: 0.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ver {
+    color: var(--color-blue);
+    text-decoration: none;
+    margin-left: auto;
+  }
+  
+  .verde { background-color: var(--color-secondary-green); }
+  .naranja { background-color: var(--color-orange); }
+  .azul { background-color: var(--color-secondary-blue); }
+  .gris { background-color: var(--color-gray); }
+  
+  /* Table styles */
+  .contenedor-tabla {
+    margin: var(--spacing-base) 0;
+    background-color: var(--color-primary);
+    padding: var(--spacing-base);
+  }
+  
+  .tabla-stock {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-base);
+  }
+  
+  .tabla-stock th {
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    text-align: start;
+    padding: var(--spacing-small) var(--spacing-base) 0.125rem;
+    border-bottom: 0.125rem solid var(--color-blue);
+  }
+  
+  .tabla-stock td {
+    padding: var(--spacing-small) var(--spacing-base);
+    border-bottom: 0.0625rem solid rgba(177, 177, 177, 0.5);
+    text-align: center;
+  }
+  
+  .tabla-stock td:first-child {
+    text-align: start;
+  }
+  
+  .sucursal {
+    font-size: var(--font-size-base);
+  }
+  
+  .sucursal-info {
+    font-size: var(--font-size-small);
+  }
+  
+  .disponibilidad {
+    border-radius: 0.3125rem;
+    margin-right: var(--spacing-base);
+    padding: 0.3125rem 1.375rem;
+    color: var(--color-primary);
+  }
+  
+  .tabla-stock tbody tr:nth-child(odd) {
+    background-color: var(--color-secondary);
+  }
+  
+  .tabla-stock tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Footer styles */
+  .footer {
+    margin-top: var(--spacing-base);
+    background-color: #DAEDFA;
+  }
+  
+  .footer-texto {
+    color: var(--color-blue);
+    padding: var(--spacing-small);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    body {
+      padding: var(--spacing-small);
+    }
+  
+    .contenedor-cantidades {
+      flex-direction: column;
+    }
+  
+    .tabla-stock {
+      font-size: var(--font-size-small);
+    }
+  }
