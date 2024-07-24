@@ -344,6 +344,11 @@
     color: var(--color-blue);
     padding: var(--spacing-small);
   }
+
+  /*Desplegables*/
+  .contenedor-desplegables {
+    display: none;
+  }
   
   /* Responsive styles */
   @media (max-width: 450px) {
